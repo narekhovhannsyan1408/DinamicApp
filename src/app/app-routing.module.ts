@@ -4,10 +4,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const appRoutes: Routes = [
   {
-    path: 'home',
+    path: '',
     loadChildren: './components/home/home.module#HomeModule'
   },
-  {path: '**', redirectTo: '/home'}
+  {path: '**', redirectTo: '/'}
 ];
 
 @NgModule({
