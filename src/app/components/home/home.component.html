@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-6">
+    <div class="content">
+      <h2 class="tile">Items</h2>
+      <form class="form" *ngIf="form" [formGroup]="form" (ngSubmit)="addItem()">
+        <div class="row add-wrapper">
+          <div class="col-9">
+            <input formControlName="name" type="text" class="add" placeholder="Type name here...">
+          </div>
+          <div class="col-3">
+            <button type="submit" class="btn btn-info added-btn" [disabled]="!form.value.name">Add new</button>
+          </div>
+        </div>
+      </form>
+      <div class="items" *ngIf="data">
+        <div class="item" *ngFor="let item of data; let i = index;">
+          <div (click)="setComments(item, i)">
+            <p class="item-name">{{item.text}}</p>
+            <span class="point">{{item.point}}</span>
+            <button type="button" class="delete-btn" (click)="deleteItem(i)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="content" *ngIf="comments">
+      <app-comments [data]="comments" (commentsData)="getComments($event, comments)"></app-comments>
+    </div>
+  </div>
+</div>
+

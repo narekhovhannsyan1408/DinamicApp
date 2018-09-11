@@ -1,0 +1,29 @@
+<h2 class="tile" *ngIf="data">{{data.text}}</h2>
+<div class="comments-wrapper">
+  <div class="comment">
+    <div class="comment-container" *ngFor="let comment of data.comments">
+      <div class="row">
+        <div class="col-1">
+          <div class="avatar"></div>
+        </div>
+        <div class="col-11">
+          <p class="text">
+            {{comment.description}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="new-comment-container">
+      <div class="row">
+        <div class="col-1">
+          <div class="avatar"></div>
+        </div>
+        <div class="col-11">
+          <form class="form" *ngIf="commentForm" [formGroup]="commentForm">
+            <textarea formControlName="description" class="textarea" (keydown.control.enter)="addComment()"></textarea>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+.content {
+  padding: 30px 15px 30px 20px;
+  -webkit-box-shadow: 0 0 10px 0 rgba(148, 148, 148, 1);
+  -moz-box-shadow: 0 0 10px 0 rgba(148, 148, 148, 1);
+  box-shadow: 0 0 10px 0 rgba(148, 148, 148, 1);
+  max-height: 95vh;
+  overflow-y: scroll;
+  .title {
+    color: #fff;
+    font-size: 36px;
+  }
+  .add-wrapper {
+    margin-top: 25px;
+    .add {
+      padding: 12px;
+      border-radius: 5px;
+      height: 37px;
+      border: 2px solid #CCCCCC;
+      width: 100%;
+      & ::placeholder {
+        color: #B3B3B3;
+      }
+
+      & :-ms-input-placeholder {
+        color: #B3B3B3;
+      }
+
+      & ::-ms-input-placeholder {
+        color: #B3B3B3;
+      }
+    }
+    .added-btn {
+      height: 37px;
+      background-color: #27CCC0;
+      width: 100%;
+    }
+  }
+  .item {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F2F2F2;
+    cursor: pointer;
+    .item-name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 300px;
+      float: left;
+    }
+    .point {
+      width: 39px;
+      height: 20px;
+      background-color: #27CCC0;
+      color: #fff;
+      font-size: 13px;
+      text-align: center;
+      line-height: 20px;
+      margin-left: 40px;
+      padding: 3px 10px;
+      border-radius: 10%;
+    }
+    .delete-btn {
+      width: 97px;
+      height: 34px;
+      border: 2px solid #FF3159;
+      color: #FF3159;
+      background-color: #fff;
+      border-radius: 5px;
+      float: right;
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
+}

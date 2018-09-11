@@ -1,0 +1,35 @@
+.comments-wrapper {
+  padding-bottom: 20px;
+  .comment {
+    padding-top: 32px;
+  }
+}
+.avatar {
+  width: 52px;
+  height: 52px;
+  margin: 5px auto 0 auto;
+  background-color: #FF8A00;
+}
+
+.comment-container {
+  border-bottom: 1px solid #F2F2F2;
+  margin-top: 13px;
+  &:nth-child(2n) {
+    .avatar {
+      background-color: #47568C;
+    }
+  }
+}
+
+.new-comment-container {
+  margin-top: 13px;
+  .avatar {
+    background-color: #E6E6E6;
+  }
+  .textarea {
+    height: 70px;
+    width: 100%;
+    resize: none;
+    border: 2px solid #CCCCCC;
+  }
+}
